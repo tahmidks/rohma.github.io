@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 23px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+ 
+#demo {
+	font-size: 20px;
+    color: red;
+}
+
+#demoo {
+	font-size: 20px;
+    color: red;
+}
+
+#myclick {
+  width: 100px;
+  font-size: 15px;
+  padding: 10px;
+  border: none;
+  background: black;
+  color: #fff;
+}
+
+#myBtm {
+  width: 200px;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  float: left;
+}
+
+#myBtm:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="https://github.com/Rohmatul-Hamidah/PK.github.io/blob/main/videbg.mp4?raw=true" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video> 
+<div class="content"> 
+  <h1><marquee>Selamat Datang di LEA GLORIA MASK</marquee></h1>
+	<p id="demoo"></p> 
+	<script>
+	var d = new Date();
+	document.getElementById("demoo").innerHTML = d.toDateString();
+	</script>
+   
+    <h3>Klik Tombol Di Bawah ini Yaaa...</h3>
+
+	<button id="myclick" onclick="myFunction()">Click</button>
+	<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  var person = prompt("Masukkan Nama Anda :");
+  if (person == null || person == "") {
+    txt = "User cancelled the prompt.";
+  } else {
+    txt = "Hallo " + person + "! Apa Kabar? Semoga Sehat Selalu";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+ 
+  <p> Silahkan klik tombol "Manfaat" di bawah ini untuk melihat Manfaat Masker Organik LEA GLORIA.</p>
+ 	<button id="myBtm" onclick="location.href='https://rohmatul-hamidah.github.io/PK.github.io/'">Manfaat</button>
+</div>
+
+
+</body>
+</html>
